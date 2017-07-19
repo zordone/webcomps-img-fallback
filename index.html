@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Custom image element with fallback</title>
+        <link rel="import" href="img-fallback/img-fallback.html">
+        
+        <style>
+            img-fallback {
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>    
+        <h2>Valid image without fallback</h2>
+        <img-fallback src="test.jpg"></img-fallback>
+
+        <h2>Valid image with fallback</h2>
+        <img-fallback src="test.jpg" fallback="fallback.jpg"></img-fallback>
+        
+        <h2>Invalid image without fallback</h2>        
+        <img-fallback src="invalid1.jpg"></img-fallback>
+
+        <h2>Invalid image with fallback</h2>        
+        <img-fallback src="invalid2.jpg" fallback="fallback.jpg"></img-fallback>
+
+        <h2>Invalid image with invalid fallback</h2>        
+        <img-fallback src="invalid2.jpg" fallback="invalid-fallback.jpg"></img-fallback>
+    </body>
+</html>
